@@ -1,0 +1,160 @@
+th {
+
+    color: rgb(172, 21, 21);   /* texto dos cabeçalhos */
+}
+
+td {
+     color: rgb(0, 0, 0);    /* texto das células */
+}
+
+.fotografias {
+
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     gap: 10px;
+}
+.fotografias img {
+    width: 150px;
+    border-radius: 20px;
+    transition: transform 0.8s ease-in-out, border-radius 0.8s ease-in-out;
+}
+
+.fotografias img:hover {
+    transform: scale(1.2); /* aumenta 20% */
+    border-radius: 5px;    /* arredondamento muda */
+}
+
+.poema p:nth-child(1) {
+
+    font-weight: bold;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+body{
+
+    background-color: rgb(227, 227, 227);
+}
+
+header{
+
+    background-color: rgb(21, 159, 21);
+    width: 100%;
+}
+
+header h1 {
+    color: white;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    
+}
+
+header nav {
+
+    display: flex;
+    justify-content: center; /* centra os links */
+    gap: 30px;               /* espaço entre eles */
+    background-color: #272727;
+    padding: 8px;
+}
+
+
+header nav a {
+
+    color: white;
+    text-decoration: none;
+    margin: 0%;
+}
+
+footer{
+
+    color: white;
+    text-align: center;
+    font-size: 10px;
+    background-color: #272727;
+    padding: 2px;
+
+
+}
+
+.galeria {
+    display: flex;           /* coloca as fotos em linha */
+    gap: 10px;               /* espaço entre as fotos */
+    width: 100%;             /* full-width */
+    margin-top: 20px;
+    
+}
+
+.galeria img {
+    width: 33.33%;           /* cada imagem ocupa 1/3 da largura */
+    height: auto;            /* mantém proporção */
+    object-fit: cover;
+    display: block;          /* remove espaços embaixo da imagem */
+}
+
+.home {
+
+    background-color: white;    
+    padding: 1px 10px;
+    border-radius: 5px;        /* cantos arredondados */
+    margin-top: 30px;
+
+}
+
+
+
+
+
+.emblematica .imagem-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* ocupa a altura total da janela */
+}
+
+.emblematica img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* cobre toda a área */
+    display: block;
+}
+
+.emblematica .frase {
+    position: absolute;
+    top: 50%;   /* a meio da altura */
+    left: 50%;  /* a meio da largura */
+    transform: translate(-50%, -50%); /* centraliza */
+    color: white;
+    font-size: 5vw; /* adapta ao ecrã */
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6); /* contraste */
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  header nav {
+    flex-direction: column;  /* links ficam em coluna */
+    align-items: center;     /* centraliza */
+    gap: 10px;
+  }
+}

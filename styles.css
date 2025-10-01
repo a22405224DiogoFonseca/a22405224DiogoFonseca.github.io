@@ -1,18 +1,215 @@
-body {
-    background-color: #b3b3b3;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-img { width: 300px }
 
-.fotografias {
+
+header {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 30px;
+    background-color: #E83030  
 }
 
-.fotografias img {
-
-    width: 150px;
-    border-radius: 20px;
+nav ul{
+    list-style: none;
+    padding: 0;
+    margin 0px;
+    display: flex;
+    gap: 1rem;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    text: bold;  
+}
+nav a:hover{
+    color: #b31010;
 }
 
+
+
+
+
+
+.hero {
+
+    height: 100vh; 
+    background: url("images/museu.jpg");
+    background-size: cover;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center;     /* centraliza verticalmente */
+    text-align: center;
+    position: relative;
+    color: white;
+
+    
+}
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+.hero-content h1{
+  font-size: 60px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.7); /* melhora leitura sobre a imagem */
+}
+
+.botao {
+  padding: 12px 25px;
+  background-color: #E83030;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+  
+}
+.botao:hover {
+  background-color: #b31010;
+}
+
+
+
+
+
+
+
+
+.projetos {
+    height: 60vh;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 60px 20px;
+    background-color: red; 
+    text-align: center;
+    display: flex;
+    flex-direction: column;   /* organiza título e container dos cards em coluna */
+    align-items: center;      /* centraliza horizontalmente todo o conteúdo */
+    text-align: center;
+}
+.titulo-secao {
+    color: white;
+    font-size: 50px;
+    margin-bottom: 60px;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.7); /* melhora leitura sobre a imagem */
+    
+}
+
+.container-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px 60px;
+  justify-items: center;
+}
+
+.container-cards a{
+
+    color: #E83030;        
+    text-decoration: none;  
+}
+
+.container-cards a{
+
+    color: #b31010;
+
+}
+
+.card:nth-child(3) {
+  grid-column: 1 / -1;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.card-titulo {
+  font-size: 1.5rem;
+}
+
+.card-descricao{
+    font-size: 1rem;
+}
+
+
+
+
+
+.disciplina{
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+    gap: 40px;
+    background-color: red;
+}
+
+.container-texto{
+
+    background: white;
+    padding: 20px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* sombra */
+    max-width: 500px;
+
+}
+.container-texto h2{
+
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+.container-texto p{
+
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.container-texto ul{
+
+    font-size: 15px ;
+    padding-left: 15px;
+    margin-bottom: 20px;
+}
+
+.wordcloud img {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+
+@media (max-width: 768px) {
+  .disciplina {
+    flex-direction: column;      /* empilha no telemóvel */
+    align-items: center;         /* centraliza os elementos */
+  }
+
+  .container-texto,
+  .wordcloud img {
+    max-width: 100%;
+  }
+}
+
+
+footer{
+
+    text-align: center;
+}
